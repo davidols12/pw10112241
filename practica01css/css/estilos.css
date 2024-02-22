@@ -1,5 +1,5 @@
 body{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     font-size: 16px;  /*1em*/
     margin: 0px auto;
     max-width: 1024px;
@@ -7,7 +7,37 @@ body{
 }
 header{
     background: #D1E3EE;
-
+}
+header nav ul li{
+    /*border: 1px solid red;*/
+    color: white;
+    display: inline-block;
+    margin-right: 20px;
+}
+header nav ul li:hover{
+    background: #026DC6;
+    color: rgb(123, 204, 228);
+}
+header nav{
+    background: #026DC6;
+    border-radius: 5px;
+    margin: 0px auto;
+    padding: 2px 0px;
+    width: 99%;
+}
+header nav form{
+    float: right;
+    margin-top: -35px;
+    margin-right: 10px;
+}
+header nav form input{
+    border-radius: 5px;
+    border: 1px solid green;
+    color: white;
+}
+header nav form input[type="submit"]{
+    background: green;
+    color: white;
 }
 #logo{
     margin: -150px 0px 0px 0px;
