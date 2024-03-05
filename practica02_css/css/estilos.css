@@ -1,4 +1,5 @@
 body{
+    border: 1px solid red;
     font-size: 16px;
     margin: 0px auto;
     max-width: 1078px;
@@ -24,10 +25,57 @@ header nav ul li{
     padding-bottom: 2px;
 
 }
+#bgoffer{
+    position: relative;
+    top: -410px;
+    left: -35px;
+}
 #granthams{
     margin-left: 25px;
     margin-top: 25px;
 }
 #paint{
     float: right;
+}
+#primerseccion{
+    border: 1px solid blue;
+    margin-top: 60px;
+    height: 318px;
+}
+#primerseccion article{
+    display: inline-block;
+    vertical-align: top;
+}
+#secc01art01{
+    /* border: 1px solid red; */
+    width: 61%;
+}
+#secc01art02{
+    /* border: 1px solid red; */
+    width: 30%;
+    margin-left: 50px;
+}
+#secc01art02  ul{
+    list-style: none;
+}
+#secc01art02 ul li:before{
+    color: #FF0099;
+    content: "• ";
+
+}
+
+.colorazul{
+    color: #4267B3;
+}
+.colorrosa{
+    color: #FF0099;
+}
+.colorverde{
+    color: #8BC500;
+}
+.nito{
+    font-weight: bold;
+}
+.letragrande{
+    font-size: 3.5em;
 }
