@@ -1,0 +1,94 @@
+html{
+    --fondo-negro: #2C2C2C;
+    --color-gris: #949494;
+    --color-verde: #80e42f;
+}
+body{
+    font-size: 16px;
+    margin: 0px auto;
+    max-width: 1024px;
+}
+header ul li{
+    display: inline-block;
+    padding: 8px 10px;
+    text-align: center;
+}
+header ul{
+    margin-left: -40px;
+    margin-top: 55px;
+}
+header section img{
+    float: right;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+header img{
+    margin-top: 45px;
+    margin-left: 10px;
+}
+hr{
+    border-style: dashed;
+    color: var(--color-gris);
+}
+footer article{
+    display: inline-block;
+    vertical-align: top;
+    width: 19%;
+}
+#section02 article{
+    display: inline-block;
+    vertical-align: top;
+}
+#section03 article{
+    
+}
+#art-bike{
+    width: 39%;
+}
+#art-videos{
+    width: 60%;
+}
+#bike{
+    width: 100%;
+}
+#five-years{
+    width: 35%;
+    position: relative;
+    bottom: 100px;
+}
+#buy{
+    position: relative;
+    left: 350px;
+    top: 100px;
+}
+#go_to_shop{
+    position: relative;
+    left: 330px;
+    top: 40px;
+}
+#video01{
+    width: 49%;
+}
+#video02{
+    width: 49%;
+}
+
+
+.letra-verde{
+    color: var(--color-verde);
+}
+.letra-negra{
+    color: var(--fondo-negro);
+}
+.letra-gris{
+    color: var(--color-gris);
+}
+.nito{
+    font-weight: bold;
+}
+.tam-nav{
+    font-size: 1.2em;
+}
+.tam-titulo{
+    font-size: 4em;
+}
