@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica 05</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <header>
-        <img src="img/logo.png" alt="">
-    </header>
-    <section>
-        <article>
-            <nav>
-                <ul>
-                    <li><img src="img/notificaciones.png" alt="notificaciones"></li>
-                    <li><img src="img/mensajes.png" alt="mensajes"></li>
-                    <li><img src="img/ajustes.png" alt="ajustes"></li>
-                </ul>
-            </nav>
-        </article>
-    </section>
-    <main>
         <section>
+            <img src="img/logo.png" alt="">
+        </section>
+    </header>
+    <main>
+        <section id="section-nav">
             <article>
+                <nav>
+                    <ul>
+                        <li><img src="img/ajustes.png" alt="ajustes"></li>
+                        <li><img src="img/mensajes.png" alt="mensajes"></li>
+                        <li><img src="img/notificaciones.png" alt="notificaciones"></li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
+        <section id="section-aside">
+            <article id="article-links">
                 <img src="img/panel.PNG" alt="">
                 <ul>
                     <li>&lt;/&gt; Example</li>
@@ -37,8 +40,11 @@
                     <li>&lt;/&gt; Example</li>
                 </ul>
             </article>
-            <article>
-                <img src="img/logoprogress.png" alt="progress">
+            <article id="article-progress">
+                <img src="img/logoprogress.png" id="progress" alt="progress">
+                <span class="letra-blanca">Panel with progress</span>
+            </article>
+            <article id="article-bars">
                 <span class="letra-gris">Progress Bar</span>
                 <img src="img/barra01.png" alt="barra01">
                 <span class="letra-gris">Progress Bar</span>

@@ -1,0 +1,52 @@
+body{
+    font-size: 16px;
+    margin: 0px auto;
+    max-width: 1024px;
+}
+header section{
+    /* border: 1px solid red; */
+    background-color: #235d92;
+}
+header section img{
+    margin-left: 440px;
+    width: 15%;
+}
+main{
+    margin-top: 30px;
+    background-color: #efefef;
+}
+main section{
+    background-color: white;
+}
+#section-nav img{
+    width: 80px;
+    height: 30px;
+}
+#section-nav article nav ul li{
+    display: inline-block;
+    margin-left: -5px;
+    float: right;
+}
+#section-aside{
+    width: 20%;
+    background-color: white;
+    padding: 15px;
+}
+#progress{
+    width: 30px;
+}
+#article-links img{
+    width: 100%;
+}
+#article-bars img{
+    width: 100%;
+}
+#article-progress span{
+    padding: 10px 1px;
+}
+.letra-blanca{
+    color: white;
+}
+.letra-gris{
+    
+}
