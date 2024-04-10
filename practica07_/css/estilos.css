@@ -1,0 +1,42 @@
+body{
+    font-size: 16px;
+    margin: 0px auto;
+    max-width: 1024px;
+    background-color: darkslateblue;
+}
+
+/* Header */
+header{
+    
+}
+.titulo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid red;
+    width: 300px;
+}
+.titulo__img{
+    height: 25px;
+}
+.titulo__opciones{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: -50px;
+}
+.titulo__opciones a{
+    text-decoration: none;
+}
+.titulo__opciones--signin{
+    display: flex;
+    margin-right: 50px;
+}
+.titulo__opciones--signin img{
+    width: 20px;
+}
+
+/* Main */ 
+main{
+    
+}
