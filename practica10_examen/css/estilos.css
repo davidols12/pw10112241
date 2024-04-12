@@ -1,0 +1,91 @@
+:root{
+    /* Custom Propierties */
+    --color-rosa: #ff0043;
+    --color-oscuro: #5b5a5a;
+}
+body{
+    font-size: 16px;
+    margin: 0px auto;
+    max-width: 1024px;
+    background-color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border: solid red 1px; */
+}
+h2{
+    font-size: 40px;
+    margin: -30px 0 80px 20px;
+}
+
+/* Globales */
+.boton-relleno{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--color-rosa);
+    border: solid var(--color-rosa) 2px;
+    font-weight: bold;
+    margin: 0 30px 0 15px;
+}
+.color-oscuro{
+    color: var(--color-oscuro);
+}
+
+/* Codigo */ 
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+}
+.encabezado__img{
+    margin-left: 25px;
+    margin-top: 10px;
+}
+.encabezado__nav{
+    margin-top: 25px;
+}
+.encabezado__nav a{
+    text-decoration: none;
+    padding: 20px;
+    color: var(--color-oscuro);
+}
+.encabezado__botones{
+    margin-top: 16px;
+}
+.encabezado__botones--changelog{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: solid var(--color-rosa) 2px;
+    color: var(--color-rosa);
+    background-color: white;
+    font-weight: bold;
+}
+.encabezado__botones--contact{
+
+}
+.informacion{
+    display: flex;
+    gap: 60px;
+    padding: 60px 20px;
+}
+.informacion__texto{
+    padding: 50px 0;
+}
+.informacion__texto h1{
+    font-size: 60px;
+    margin-top: -15px;
+}
+.informacion p{
+    margin-top: -40px;
+}
+.informacion__search{
+    border: white;
+    margin-top: 25px;
+}
+.topics{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+.topics p{
+    color: var(--color-oscuro);
+}
