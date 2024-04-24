@@ -6,10 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["API","PW","Clientes","Ejemplo"],
+  "keywords": [
+    "API",
+    "PW",
+    "Clientes",
+    "Ejemplo"
+  ],
   "author": "PROGRAMACION WEB - David Olivas",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1"
   }
 }
