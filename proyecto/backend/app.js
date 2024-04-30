@@ -40,6 +40,52 @@ app.get(('/api/clientes'),(req,res)=>{
     });
 });
 
+//Seleccionamos un cliente en especifico
+app.get('/api/clientes/:id', (req,res)=>{
+    conexion.query('SELECT * FROM clientes WHERE id=?', [req.params.id],(error,fila)=>{
+        if(error){
+            throw error;
+        }else{
+            res.send(fila);
+        }
+    });
+});
+
+app.delete('/api/clientes/:id', (req,res)=>{
+    let id=req.params.id;
+    conexion.query('DELETE FROM clientes WHERE id=?',[id],(error,filas)=>{
+        if (error) {
+            throw error;
+        }else{
+            res.send(filas);
+        }
+    });
+});
+
+//Insertar
+app.post('/api/clientes/',(req,res)=>{
+    let data = {
+        id:req.body.id,
+        nombre:req.body.nombre,
+        apellido:req.body.apellido,
+        direccion:req.body.direccion,
+        telefono:req.body.telefono,
+        rfc:req.body.rfc,
+        curp:req.body.vurp,
+        cp:req.body.cp
+    }
+    let sql = "INSERT INTO clientes SET ?";
+    conexion.query(sql,data,(error,resultado)=>{
+        if (error) {
+            throw error;
+        } else {
+            res.send(resultado);
+        }
+    });
+});
+
+
+
 //Encender servidor
 let puerto = 3000;
 app.listen(puerto, function(){
