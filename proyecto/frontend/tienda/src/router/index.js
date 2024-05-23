@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import ClientesView from '../views/ClientesView.vue'
+import ClientesView from '../views/ClientesView.vue';
+import ClientesCreateView from '../views/ClientesCreateView.vue';
+import ClientesEditarView from '../views/ClientesEditarView.vue';
+import RegistroView from '../views/RegistroView.vue';
 
 
 const router = createRouter({
@@ -15,6 +18,21 @@ const router = createRouter({
       path: '/clientes',
       name: 'clientes',
       component: ClientesView
+    },
+    {
+      path: '/clientes/create',
+      name: 'clientescreate',
+      component: ClientesCreateView
+    },
+    {
+      path: '/clientes/:id/edit',
+      name: 'clienteseditar',
+      component: ClientesEditarView
+    },
+    {
+      path: '/clientes/registro',
+      name: 'registro',
+      component: RegistroView
     },
     {
       path: '/about',
