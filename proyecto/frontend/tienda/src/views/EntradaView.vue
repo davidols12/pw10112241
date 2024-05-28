@@ -6,9 +6,9 @@
                     <div class="card shadow-2-strong" style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
 
-                            <h3 class="mb-5">Registro de usuarios</h3>
-                            <div v-if="mensaje==1" class="alert alert-primary" role="alert">
-                                Usuario registrado con exito
+                            <h3 class="mb-5">Entrada</h3>
+                            <div v-if="mensaje" class="alert alert-danger" role="alert">
+                                {{ mensaje }}
                             </div>
 
                             <div data-mdb-input-init class="form-outline mb-4">
@@ -22,8 +22,12 @@
                             </div>
 
                             <button @click.prevent="registro()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block"
-                                type="submit">Registrar</button>
-
+                                type="submit">
+                                Validar
+                            </button>
+                            <p></p>
+                            <button @click.prevent="registroGoogle()" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-dark btn-lg btn-block"
+                            type="submit">Google</button>
 
                         </div>
                     </div>
@@ -33,26 +37,39 @@
     </section>
 </template>
 <script>
-    import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+    import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
     export default{
         name:"RegistroView",
         data(){
             return{
                 correo: '',
                 password: '',
-                mensaje: 0
+                mensaje: ''
             }
         },
         methods:{
             registro(){
-                createUserWithEmailAndPassword(getAuth(),this.correo,this.password)
-                .then((data)=>{
-                    this.mensaje = 1;
+                signInWithEmailAndPassword(getAuth(),this.correo,this.password)
+                .then((data)=> {
+                    this.mensaje = '';
                     this.correo = '';
                     this.password = '';
                 })
                 .catch((error)=>{
-                    alert(error.message)
+                    switch (error.code) {
+                        case "auth/invalid-email":
+                            this.mensaje = "Correo no valido";
+                            break;
+                        case "auth/user-not-found":
+                            this.mensaje = "Ese correo no es usuario valido";
+                            break;
+                        case "auth/wrong-password":
+                            this.mensaje = "Contraseña incorrecta";
+                            break;
+                        default:
+                            this.mensaje = "Correo o contraseña incorrecta";
+                            break;
+                    }
                 })
             },
         }

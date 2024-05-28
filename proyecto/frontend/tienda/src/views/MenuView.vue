@@ -1,8 +1,3 @@
-
-<script>
-  import {RouterLink} from 'vue-router'
-</script>
-
 <template>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
@@ -17,9 +12,41 @@
           <RouterLink class="navbar-brand" to='/proveedores'>Proveedores</RouterLink>
           <RouterLink class="navbar-brand" to='/ventas'>Ventas</RouterLink>
           <RouterLink class="navbar-brand" to='/clientes/registro'>Registro</RouterLink>
+          <RouterLink class="navbar-brand" to='/clientes/entrada'>Entrada</RouterLink>
+          <button @click="salidaSistema()" class="btn btn-primary" v-if="validado == true">Salir</button>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 </template>
+<script>
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import {RouterLink} from 'vue-router';
+  export default {
+    name: "MenuView",
+    data(){
+      return{
+        validado: false,
+        auth: '',
+      }
+    },
+    mounted(){
+      this.auth = getAuth()
+      onAuthStateChanged(this.auth,(user)=>{
+        if (user) {
+          this.validado = true
+        }else{
+          this.validado = false
+        }
+      })
+    },
+    methods:{
+      salidaSistema(){
+        signOut(this.auth).then(()=>{
+          this.$router.push("/")
+        })
+      }
+    }
+  }
+</script>
